@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .icon{
+            width: 50px;
+            height: 50px;
+            margin: 10px;
+        }
+        .container{
+            text-align: center;
+        }
+    </style>
+    <script>
+        //--------------------------------------------------------------------------------------
+        //event Handler zone 
+        //----------------------------------------------------------------------------------------
+        function mouseOverHandler(){
+            //1.개체 선택  (id=target)객체를 가져온다 
+        let target = document.getElementById("target")
+        //2 target 의 src 속성값을 변경한다  . (이벤트가 발생한 객체 자신의 src 속성값으로 변경한다 .)
+        target.src = this.src;
+        let fn = document.getElementById("filename")
+        let words = this.src.split("/");
+        fn.innerHTML=words[words.length-1];    
+        }
+        // ------------------------------------------------------------------------------------
+        function attachEventHandler(){
+            //img.icon 객체들각각의 onmaouseover이벤에 핸들러를 연결한다 
+        let iconArray =  document.getElementsByClassName("icon");
+        for(let icon of iconArray){
+            icon.addEventListener("mouseover",mouseOverHandler);
+        }
+        }
+        //--------------------------------------------------------------------------------------
+        window.onload = function (){
+            attachEventHandler();
+        }
+    </script>
+</head>
+<body>
+    <h1>Image Browser </h1>
+    <hr>
+    <div class="container"">
+        <img id="target" src="./이미지폴더/shop.png"alt="">
+        
+    </div>
+    <hr>
+    <div class="container">
+        <img class ="icon" src ="./이미지폴더/shop.png" alt="">
+        <img class="icon" src="./이미지폴더/bisnese.png"alt="">
+        <img class="icon"  src="./이미지폴더/tree.png"alt="">
+        <img class="icon"  src="./이미지폴더/truck.png"alt="">
+    </div>
+</body>
+</html>

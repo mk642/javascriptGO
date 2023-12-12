@@ -1,0 +1,30 @@
+.container{
+    background-color: chartreuse;
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+}
+
+.box {
+    border: 1px solid gray;
+    border-radius: 5px;
+    padding: 10px;
+    width: 30vw;
+    margin: 10px;
+}
+.overBox{
+    background-color: aqua;
+}
+.card {
+    border: 1px solid blue;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: lightgray;
+    margin: 10px;
+}
+.overCard{
+    background-color: darkorchid;
+}
+.draggingCard{
+    border: red;
+}

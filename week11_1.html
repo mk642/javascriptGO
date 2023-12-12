@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        span.blue{
+            color: blue;
+        }
+        table{
+            border: 10px  ;
+            margin: auto;
+            padding: auto;
+            width: 100%;
+            border: 2px solid #ccc;
+            margin-bottom: 10px;
+        }
+            
+        
+        
+    </style>
+    <script>
+        //my object 
+        let o = {name:"홍길동 ", age: "24세 ",국적:"대한민국","사는곳":"부산시"}
+        //window객체의 모든속성 이름확인하기 
+        
+        let count =1
+        let obj = window
+        for(let key in obj)
+            document.write(`<table>[${count++}]: <b>${key}</b>(<span class= "blue">${obj[key]}</span>)<br></table>`)
+    </script>
+</head>
+<body>
+
+</body>
+</html>

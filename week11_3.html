@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.onload = function(){
+        let h1 = document.createElement("h1"); //<h1>태그 노드(객체 )생성 
+        let t1 = document.createTextNode("javascript "); // 택스트노드 생성 
+        //t1 택스트노드를 h1택스트 노드를 자식으로 연결한다 . 
+        h1.appendChild(t1);     
+    
+        // let b = document.getElementsByTagName("body ")[0];
+
+        document.body.appendChild(h1);
+
+     }
+      
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

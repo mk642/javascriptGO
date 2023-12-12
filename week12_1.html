@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.onload = function(){
+            //문서가 모두 로딩(화면에 렌더링 )된후에 실행할내용작성 
+            //h1객체 선택 
+            let h1 = document.querySelector("h1")
+            h1.id ="dit"
+            let h = document.getElementById("dit")
+            // alert(h.getAttribute("id"))
+            //h1.innerHTML += " <br>자바 스크립트 문서 객체 모델 프로그래밍</br> ";
+            //h1 의 내용을 수정한다 
+            //h1 객체의 테두리 , 내부여백5px 스타일 설정하기 
+            h.style.backgroundColor = "yellow "
+            h.style.padding = "  5px" 
+            h.style.border = " 1px solid gray"
+            h.style.textAlign = "center"
+           //============================================================
+           //세번쨰 li항목 글자색을 파란색으로 변경하는 js code 작성 
+           let liItems = document.querySelectorAll("li");
+           
+                if(liItems.length > 2) {
+                    liItems[2].style.color = "blue";
+}
+            
+        }
+    </script>
+</head>
+<body>
+    <h1>Javascript DOM programming </h1> 
+    <ol start="0">
+        <li>JS기초문법 </li>
+        <li>함수</li>
+        <li>객체 </li>
+        <li>브라우저 객체모델(BOM) </li>
+        <li>문서객체모델(DOM) </li>
+    </ol>
+</body>
+</html>

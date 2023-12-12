@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery-3.7.1.min.js"></script>
+    <script>
+        let callback = function(){
+             alert("Effect finish!!!")
+        }
+        $(document).ready(function(){
+            $("#h2Hide").click(function(){
+                $("h2").fadeOut(1000,callback);
+            })
+
+            $("#h2Show").click(function(){
+                $("h2").fadeIn(1000,callback);
+            })
+
+            $("#h2Toggle").click(function(){
+                $("h2").fadeToggle(1000)
+            })
+
+            $("#h2fadeTo").click(function(){
+                $("h2").fadeTo(1000,0.5)
+            })
+            $("h2").click(function(){
+                $(this).fadeOut(500)
+            })
+        
+        })
+        //===========================================================
+        //클릭한 h2 태그만 화면에서 사라지게 
+    </script>
+</head>
+<body>
+    <h1>jquery test </h1>
+    <hr>
+    <button id="h2Hide">Hide h2</button>
+    <button id="h2Show">Show h2</button>
+    <button id="h2Toggle">Toggle h2</button>
+    <button id="h2fadeTo">fadeTo 50</button>
+    <hr>
+    <h2>hide and show effect </h2>
+    <h2>toggling Avalival</h2>
+    <h2>개별적으로도 동작지정도 쉽게 가능 </h2>
+</body>
+</html>
